@@ -92,7 +92,7 @@ public class RandomDomainEventGenerator {
 
     public static RandomDomainEventGenerator generateEvent(){
         int gestIndex = new Random().nextInt(8);
-        int demandeIndex = new Random().nextInt(29);
+        int demandeIndex = new Random().nextInt(28);
         int eventIndex = new Random().nextInt(10);
 
 

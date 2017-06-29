@@ -6,7 +6,7 @@
 		<encoder class="net.logstash.logback.encoder.LogstashEncoder"/>
 		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
 			<maxIndex>1</maxIndex>
-			<fileNamePattern>${LOG_PATH}-%i</fileNamePattern>
+			<fileNamePattern>${LOG_PATH}%i</fileNamePattern>
 		</rollingPolicy>
 		<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
 			<MaxFileSize>1MB</MaxFileSize>
