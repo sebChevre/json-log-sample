@@ -1,12 +1,12 @@
 <configuration>
-	<!--<property name="LOG_PATH" value="/tmp/json-log.json" />-->
-	<property name="LOG_PATH" value="C://logs/json-log.json" />
+	 <property name="LOG_PATH" value="/tmp/json-log.json" />
+	<!--<property name="LOG_PATH" value="C://logs/json-log.json" />-->
 	<appender name="jsonAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<File>${LOG_PATH}</File>
 		<encoder class="net.logstash.logback.encoder.LogstashEncoder"/>
 		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
 			<maxIndex>1</maxIndex>
-			<fileNamePattern>${LOG_PATH}%i</fileNamePattern>
+			<fileNamePattern>${LOG_PATH}-%i</fileNamePattern>
 		</rollingPolicy>
 		<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
 			<MaxFileSize>1MB</MaxFileSize>
