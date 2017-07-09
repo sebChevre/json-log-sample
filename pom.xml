@@ -8,6 +8,11 @@
 	<artifactId>json-log-sample</artifactId>
 	<version>1.0-SNAPSHOT</version>
 
+
+	<!-- comment this to generate jar -->
+	<packaging>war</packaging>
+
+
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -17,6 +22,26 @@
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
+
+
+	<!-- genrate jar with mvn package and then repackaging -->
+	<!-- executable jar -->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>1.5.4.RELEASE</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 
 	<dependencies>
 
@@ -36,10 +61,18 @@
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 			<version>1.4.2.RELEASE</version>
 		</dependency>
 	</dependencies>
+
+
 
 
 </project>
