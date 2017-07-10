@@ -1,5 +1,5 @@
 <configuration>
-	 <property name="LOG_PATH" value="/tmp/json-log.json" />
+	 <property name="LOG_PATH" value="/tmp/logs/json-log.json" />
 	<!--<property name="LOG_PATH" value="C://logs/json-log.json" />-->
 	<appender name="jsonAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<File>${LOG_PATH}</File>
